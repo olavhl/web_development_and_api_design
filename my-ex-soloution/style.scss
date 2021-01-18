@@ -23,7 +23,8 @@ body {
         }
 
         #answers-container {
-            p {
+            button {
+                background-color:rgb(32, 32, 32);
                 border: 1px solid white;
                 border-radius: 5px;
                 padding: 10px 0;
@@ -31,13 +32,19 @@ body {
                 margin: auto;
                 margin-bottom: 15px;
                 cursor: pointer;
+                outline: none;
                 
                 &:hover {
-                    background-color:rgba(100, 100, 111, 0.2)
+                    background-color:rgba(136, 136, 148, 0.3)
                 }
 
             }            
 
         }
+    }
+
+    #feedback-container {
+        position: relative;
+        top: 5vh;
     }
 }

@@ -1,5 +1,6 @@
 const questionContainer = document.getElementById("questions-container");
 const answerContainer = document.getElementById("answers-container");
+const feedbackContainer = document.getElementById("feedback-container");
 
 const qAndA = [
     {
@@ -62,12 +63,30 @@ function displayQandA() {
 
     for(let i = 0; i < 4; i++) {
         answers += `
-            <p>${qAndA[ran].answers[i]}</p>
+            <button id="${i}" onClick="userAnswer(${ran}, ${i})">${qAndA[ran].answers[i]}</button>
         `;
     }
 
     // Displaying answers to HTML
     answerContainer.innerHTML = answers;
+
+}
+
+function userAnswer(questionIndex, answerIndex) {
+    let correctAnswer = qAndA[questionIndex].correctAnswer;
+    
+    let feedback = '';
+
+    if (answerIndex === correctAnswer){
+        feedback = "You answered correctly!"
+        feedbackContainer.style.color = "green";
+        displayQandA();
+    } else {
+        feedback = "Wrong answer.. Better luck next time."
+        feedbackContainer.style.color = "red";
+    }
+
+    feedbackContainer.innerHTML = feedback;
 
 }
 
