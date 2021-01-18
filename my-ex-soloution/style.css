@@ -12,4 +12,32 @@ body {
   background: linear-gradient(to right, #2c2c2c, #000000);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+body #container {
+  width: 60vw;
+  height: 40vh;
+  margin: auto;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+
+body #container #questions-container {
+  margin-top: 10vh;
+  padding: 3vh;
+}
+
+body #container #answers-container p {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px 0;
+  width: 85%;
+  margin: auto;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+body #container #answers-container p:hover {
+  background-color: rgba(100, 100, 111, 0.2);
+}
 /*# sourceMappingURL=style.css.map */
