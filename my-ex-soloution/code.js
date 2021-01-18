@@ -51,7 +51,7 @@ const qAndA = [
 
 
 function displayQandA() {
-    let ran = Math.floor(Math.random() * 3);
+    let ran = Math.floor(Math.random() * 4);
     let question = qAndA[ran].question;
     
     // Displaying question to HTML
