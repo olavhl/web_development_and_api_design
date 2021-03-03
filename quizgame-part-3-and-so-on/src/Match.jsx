@@ -24,7 +24,7 @@ export class Match extends React.Component {
     };
 
     renderAnswers(answer, correct) {
-        return <button className='answer-btns' onClick={() => this.giveFeedback(correct)}>{answer}</button>
+        return <button className='answer' onClick={() => this.giveFeedback(correct)}>{answer}</button>
     }
 
 
@@ -35,7 +35,7 @@ export class Match extends React.Component {
         return (
             <div id="question-container">
 
-                <h3>{quiz.question}</h3>
+                <h3 className="question">{quiz.question}</h3>
 
                 {this.renderAnswers(quiz.answers[0], quiz.correctAnswer === 0)}
                 {this.renderAnswers(quiz.answers[1], quiz.correctAnswer === 1)}
